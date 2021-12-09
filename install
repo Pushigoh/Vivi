@@ -10,3 +10,8 @@ apt-get install -y kubelet
 swapoff -a
 echo "1" > /proc/sys/net/bridge/bridge-nf-call-iptables
 echo "1" > /proc/sys/net/ipv4/ip_forward
+
+#Create .kube directory
+mkdir -p $HOME/.kube
+cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+chown $(id -u):$(id -g) $HOME/.kube/config
