@@ -5,3 +5,8 @@ apt-get update
 apt-get install -y kubectl
 apt-get install -y kubeadm
 apt-get install -y kubelet
+
+#Config
+swapoff -a
+echo "1" > /proc/sys/net/bridge/bridge-nf-call-iptables
+echo "1" > /proc/sys/net/ipv4/ip_forward
