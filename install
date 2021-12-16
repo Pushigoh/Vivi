@@ -5,6 +5,7 @@ apt-get update
 apt-get install -y kubectl
 apt-get install -y kubeadm
 apt-get install -y kubelet
+apt-get install -y docker.io
 
 #Config
 swapoff -a
