@@ -11,6 +11,7 @@ apt-get install -y docker.io
 swapoff -a
 echo "1" > /proc/sys/net/bridge/bridge-nf-call-iptables
 echo "1" > /proc/sys/net/ipv4/ip_forward
+echo 'KUBELET_EXTRA_ARGS="--cgroup-driver=cgroupfs"' >> /etc/default/kubelet
 
 #Create .kube directory
 mkdir -p $HOME/.kube
